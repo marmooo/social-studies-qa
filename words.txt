@@ -1,0 +1,16 @@
+# https://www.news-postseven.com/archives/20200409_1554320.html
+# https://faq.tokyo-shoseki.co.jp/fa/customer/web/knowledge1715.html
+before,after
+リアス式海岸,リアス海岸
+島原の乱,島原・天草一揆
+縄文式土器,縄文土器
+弥生式土器,弥生土器
+高床式倉庫,高床倉庫
+セポイの反乱,インド大反乱
+仁徳天皇陵,大仙古墳（仁徳陵古墳）
+大和朝廷,大和政権
+問丸,問
+天領,幕領
+士農工商,四民平等
+ナチス,ナチス（国民社会主義ドイツ労働者党）
+GHQ,GHQ（連合国軍最高司令官総司令部）
