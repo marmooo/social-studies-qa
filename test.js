@@ -17,7 +17,6 @@ Deno.test("解答と選択肢の重複", async () => {
       const answer = arr[0];
       const choices = arr[3].split(" ");
       assert(!choices.includes(answer), line);
-      assertEquals(new Set(choices).size, 10, line);
     }
   }
 });
@@ -35,6 +34,7 @@ Deno.test("選択肢の数", async () => {
     for await (const line of lineStream) {
       const arr = line.split(",");
       const choices = arr[3].split(" ");
+      assertEquals(new Set(choices).size, 10, line);
       assertEquals(choices.length, 10, line);
     }
   }
