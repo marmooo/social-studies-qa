@@ -3,75 +3,75 @@
 中学社会一問一答</a><div class=navbar-nav><button title=ダークモード切替 id=toggleDarkMode class="fs-4 btn p-0 ms-1" type=button>🌓</button></div></div></nav></header><main class=container><noscript><div class="alert alert-warning">JavaScript を ON にしてください</div></noscript><div class="d-md-flex gap-3"><div class=flex-grow-1><div class=text-center><button id=startButton class="btn btn-lg btn-primary" type=button>スタート</button></div><div class="text-center py-4"><div class="d-flex justify-content-center align-items-center alert alert-dark fs-2" style=height:200px><div id=problem>桶狭間の戦いで今川義元を倒したのは誰ですか？</div></div><div id=choices><button class="btn btn-lg btn-light my-2 w-100 border" type=button>織田信長</button>
 <button class="btn btn-lg btn-light my-2 w-100 border" type=button>豊臣秀吉</button>
 <button class="btn btn-lg btn-light my-2 w-100 border" type=button>徳川家康</button>
-<button class="btn btn-lg btn-light my-2 w-100 border" type=button data-answer=true>伊達政宗</button></div></div><details open><summary>分析</summary><div class=row><div class="col-lg overflow-hidden"><h5>社会力</h5><canvas id=radar class=chart width=300 height=300></canvas></div><div class="col-lg overflow-hidden"><h5>全体の得点推移</h5><canvas id=line class=chart width=300 height=150></canvas><h5 class=pt-3>カテゴリ別の得点</h5><details><summary>地理(日本)の語句</summary><canvas id=japanGeographyWords class=chart width=300 height=150></canvas></details><details><summary>地理(世界)の語句</summary><canvas id=worldGeographyWords class=chart width=300 height=150></canvas></details><details><summary>歴史(日本史)の語句</summary><canvas id=japanHistoryWords class=chart width=300 height=300></canvas></details><details><summary>歴史(日本史)の人物</summary><canvas id=japanHistoryPersons class=chart width=300 height=300></canvas></details><details><summary>歴史(世界史)の語句</summary><canvas id=worldHistoryWords class=chart width=300 height=150></canvas></details><details><summary>歴史(世界史)の人物</summary><canvas id=worldHistoryPersons class=chart width=300 height=150></canvas></details><details><summary>公民の語句</summary><canvas id=civicsWords class=chart width=300 height=150></canvas></details></div></div></details><details class=pb-4><summary>間違った問題一覧</summary><table class="table table-sm table-striped mt-1"><tbody id=solvedProblems><tr><th>分野<th>カテゴリ<th>解答<th>問題</table></details></div><div id=questionScope class=text-nowrap><h5>出題範囲</h5><details open><summary data-subject=日本地理語句>地理(日本)の語句</summary><div class=form-check><label class=form-check-label>すべて
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>日本
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>北海道
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>東北
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>関東
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>中部
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>近畿
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>中国・四国
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>九州
-<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=世界地理語句>地理(世界)の語句</summary><div class=form-check><label class=form-check-label>すべて
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>世界
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>アジア
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>ヨーロッパ
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>アフリカ
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>北アメリカ
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>南アメリカ
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>オセアニア
-<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=日本史語句>歴史(日本史)の語句</summary><div class=form-check><label class=form-check-label>すべて
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>縄文
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>弥生
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>古墳
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>飛鳥
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>奈良
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>平安
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>鎌倉
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>室町
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>南北朝
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>戦国
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>安土桃山
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>江戸
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>幕末
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>明治
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>大正
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>昭和
-<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=日本史人物>歴史(日本史)の人物</summary><div class=form-check><label class=form-check-label>すべて
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>縄文
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>弥生
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>古墳
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>飛鳥
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>奈良
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>平安
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>鎌倉
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>室町
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>南北朝
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>戦国
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>安土桃山
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>江戸
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>幕末
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>明治
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>大正
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>昭和
-<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=世界史語句>歴史(世界史)の語句</summary><div class=form-check><label class=form-check-label>すべて
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>先史
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>古代
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>中世
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>近世
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>近代
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>現代
-<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=世界史人物>歴史(世界史)の人物</summary><div class=form-check><label class=form-check-label>すべて
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>古代
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>中世
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>近世
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>近代
-<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label>現代
-<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=公民語句>公民の語句</summary><div class=form-check><label class=form-check-label>すべて
-<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label>現代社会
-<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label>法
-<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label>政治
-<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label>経済
+<button class="btn btn-lg btn-light my-2 w-100 border" type=button data-answer=true>伊達政宗</button></div></div><details open><summary>分析</summary><div class=row><div class="col-lg overflow-hidden"><h5>社会力</h5><canvas id=radar class=chart width=300 height=300></canvas></div><div class="col-lg overflow-hidden"><h5>全体の得点推移</h5><canvas id=line class=chart width=300 height=150></canvas><h5 class=pt-3>カテゴリ別の得点</h5><details><summary>地理(日本)の語句</summary><canvas id=japanGeographyWords class=chart width=300 height=150></canvas></details><details><summary>地理(世界)の語句</summary><canvas id=worldGeographyWords class=chart width=300 height=150></canvas></details><details><summary>歴史(日本史)の語句</summary><canvas id=japanHistoryWords class=chart width=300 height=300></canvas></details><details><summary>歴史(日本史)の人物</summary><canvas id=japanHistoryPersons class=chart width=300 height=300></canvas></details><details><summary>歴史(世界史)の語句</summary><canvas id=worldHistoryWords class=chart width=300 height=150></canvas></details><details><summary>歴史(世界史)の人物</summary><canvas id=worldHistoryPersons class=chart width=300 height=150></canvas></details><details><summary>公民の語句</summary><canvas id=civicsWords class=chart width=300 height=150></canvas></details></div></div></details><details class=pb-4><summary>間違った問題一覧</summary><table class="table table-sm table-striped mt-1"><tbody id=solvedProblems><tr><th>分野<th>カテゴリ<th>解答<th>問題</table></details></div><div id=questionScope class=text-nowrap><h5>出題範囲</h5><details open><summary data-subject=日本地理語句>地理(日本)の語句</summary><div class=form-check><label class=form-check-label data-category=すべて>すべて
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=日本>日本
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=北海道>北海道
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=東北>東北
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=関東>関東
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=中部>中部
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=近畿>近畿
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=中国・四国>中国・四国
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=九州>九州
+<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=世界地理語句>地理(世界)の語句</summary><div class=form-check><label class=form-check-label data-category=すべて>すべて
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=世界>世界
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=アジア>アジア
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=ヨーロッパ>ヨーロッパ
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=アフリカ>アフリカ
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=北アメリカ>北アメリカ
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=南アメリカ>南アメリカ
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=オセアニア>オセアニア
+<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=日本史語句>歴史(日本史)の語句</summary><div class=form-check><label class=form-check-label data-category=すべて>すべて
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=縄文>縄文
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=弥生>弥生
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=古墳>古墳
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=飛鳥>飛鳥
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=奈良>奈良
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=平安>平安
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=鎌倉>鎌倉
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=室町>室町
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=南北朝>南北朝
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=戦国>戦国
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=安土桃山>安土桃山
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=江戸>江戸
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=幕末>幕末
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=明治>明治
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=大正>大正
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=昭和>昭和
+<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=日本史人物>歴史(日本史)の人物</summary><div class=form-check><label class=form-check-label data-category=すべて>すべて
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=縄文>縄文
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=弥生>弥生
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=古墳>古墳
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=飛鳥>飛鳥
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=奈良>奈良
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=平安>平安
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=鎌倉>鎌倉
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=室町>室町
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=南北朝>南北朝
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=戦国>戦国
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=安土桃山>安土桃山
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=江戸>江戸
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=幕末>幕末
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=明治>明治
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=大正>大正
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=昭和>昭和
+<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=世界史語句>歴史(世界史)の語句</summary><div class=form-check><label class=form-check-label data-category=すべて>すべて
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=先史>先史
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=古代>古代
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=中世>中世
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=近世>近世
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=近代>近代
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=現代>現代
+<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=世界史人物>歴史(世界史)の人物</summary><div class=form-check><label class=form-check-label data-category=すべて>すべて
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=古代>古代
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=中世>中世
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=近世>近世
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=近代>近代
+<input class=form-check-input type=checkbox name=problems checked></label></div><div class=form-check><label class=form-check-label data-category=現代>現代
+<input class=form-check-input type=checkbox name=problems checked></label></div></details><details><summary data-subject=公民語句>公民の語句</summary><div class=form-check><label class=form-check-label data-category=すべて>すべて
+<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label data-category=現代社会>現代社会
+<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label data-category=法>法
+<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label data-category=政治>政治
+<input class=form-check-input type=checkbox name=problems></label></div><div class=form-check><label class=form-check-label data-category=経済>経済
 <input class=form-check-input type=checkbox name=problems></label></div></details></div></div></main><footer class="pt-5 alert text-center"><div class="d-flex justify-content-center text-start flex-wrap"><div class="table-responsive text-nowrap"><h6>社会アプリ</h6><table class="table table-sm table-striped w-auto"><tbody><tr><td><img class=favicon alt src=https://marmooo.github.io/social-studies-qa/favicon/favicon.svg width=16 height=16 loading=lazy>
 <a href=https://marmooo.github.io/social-studies-qa/>中学社会一問一答</a><td>中学社会の四択クイズ。<tr><td><img class=favicon alt src=https://marmooo.github.io/flags-quiz/favicon/favicon.svg width=16 height=16 loading=lazy>
 <a href=https://marmooo.github.io/flags-quiz/ja/>国旗クイズ</a><td>国旗を四択問題で答えよう。<tr><td><img class=favicon alt src=https://marmooo.github.io/world-map-puzzle/favicon/favicon.svg width=16 height=16 loading=lazy>

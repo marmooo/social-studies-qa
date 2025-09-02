@@ -273,7 +273,7 @@ function getQuestionScope() {
   for (const input of checkedInputs) {
     const subject =
       input.parentNode.parentNode.parentNode.firstElementChild.dataset.subject;
-    const category = input.parentNode.textContent.trimEnd();
+    const category = input.parentNode.dataset.category;
     scope.add(`${subject}:${category}`);
   }
   return scope;
