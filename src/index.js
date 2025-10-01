@@ -383,7 +383,7 @@ function updateBarCharts(problem, incorrect) {
   const labelNodes = subjects[subjectPos].querySelectorAll("label");
   const labels = new Array(labelNodes.length);
   for (let i = 0; i < labelNodes.length; i++) {
-    labels[i] = labelNodes[i].textContent.trimEnd();
+    labels[i] = labelNodes[i].dataset.category;
   }
   const labelPos = labels.findIndex((label) => label === problem.category) - 1;
   const chart = charts[subjectId];
