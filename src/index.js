@@ -505,7 +505,9 @@ function handleCorrect(node, problem) {
 
 function handleIncorrect(node) {
   incorrect = true;
-  node.textContent = `❌ ${node.textContent}`;
+  if (!node.textContent.startsWith("❌")) {
+    node.textContent = `❌ ${node.textContent}`;
+  }
   playAudio("incorrect");
 }
 
