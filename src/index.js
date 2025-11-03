@@ -12,6 +12,7 @@ import {
   RadarController,
   RadialLinearScale,
 } from "https://cdn.jsdelivr.net/npm/chart.js@4.5.0/+esm";
+import { createWorker } from "https://cdn.jsdelivr.net/npm/emoji-particle@0.0.4/+esm";
 
 Chart.register(
   BarController,
@@ -27,6 +28,9 @@ Chart.register(
   RadialLinearScale,
 );
 
+const emojiParticle = initEmojiParticle();
+const maxParticleCount = 10;
+let consecutiveWins = 0;
 const charts = {};
 let totalTrials = 100;
 const eras = [
@@ -189,6 +193,30 @@ function playAudio(name, volume) {
   gainNode.connect(audioContext.destination);
   sourceNode.connect(gainNode);
   sourceNode.start();
+}
+
+function initEmojiParticle() {
+  const canvas = document.createElement("canvas");
+  Object.assign(canvas.style, {
+    position: "fixed",
+    pointerEvents: "none",
+    top: "0px",
+    left: "0px",
+  });
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+  document.body.appendChild(canvas);
+
+  const offscreen = canvas.transferControlToOffscreen();
+  const worker = createWorker();
+  worker.postMessage({ type: "init", canvas: offscreen }, [offscreen]);
+
+  globalThis.addEventListener("resize", () => {
+    const width = document.documentElement.clientWidth;
+    const height = document.documentElement.clientHeight;
+    worker.postMessage({ type: "resize", width, height });
+  });
+  return { canvas, offscreen, worker };
 }
 
 function getRandomInt(min, max) {
@@ -420,10 +448,24 @@ function setProblem() {
   shuffle(choices);
   choices[0].textContent = problem.answer;
   choices[0].onclick = () => {
-    if (incorrect) addSolvedProblems(problem);
+    if (incorrect) {
+      consecutiveWins = 0;
+      addSolvedProblems(problem);
+    }
     updateChart(problem, incorrect);
     choices[0].textConent = `⭕ ${choices[0].textContent}`;
     playAudio("correct");
+    consecutiveWins++;
+    for (let i = 0; i < Math.min(consecutiveWins, maxParticleCount); i++) {
+      emojiParticle.worker.postMessage({
+        type: "spawn",
+        options: {
+          particleType: "popcorn",
+          originX: Math.random() * emojiParticle.canvas.width,
+          originY: Math.random() * emojiParticle.canvas.height,
+        },
+      });
+    }
     setProblem();
   };
   if (problem.subject.endsWith("人物")) {
