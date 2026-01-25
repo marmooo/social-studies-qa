@@ -11,7 +11,7 @@ import {
   PointElement,
   RadarController,
   RadialLinearScale,
-} from "https://cdn.jsdelivr.net/npm/chart.js@4.5.0/+esm";
+} from "https://cdn.jsdelivr.net/npm/chart.js@4.5.1/+esm";
 import { createWorker } from "https://cdn.jsdelivr.net/npm/emoji-particle@0.0.4/+esm";
 
 Chart.register(
